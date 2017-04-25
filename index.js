@@ -15,7 +15,9 @@ var server = http.createServer(function(req, res) {
 						'    </head>'+ 
 						'    <body>'+
 						'     	<a href="contact.html">Lien vers Contact</a>'+
-						'     	<a href="contact.html">Lien vers Todolist</a>'+
+						'     	<a href="todolist.html">Lien vers Todolist</a>'+
+						'     	<a href="login.html">Lien vers login</a>'+
+						'     	<a href="register.html">Lien vers Enregistrement</a>'+
 						'    </body>'+
 						'</html>'
 					);
@@ -33,7 +35,7 @@ var server = http.createServer(function(req, res) {
 						'    </body>'+
 						'</html>');
         	break;
-        case '/Todolist.html' :
+        case '/todolist.html' :
         	res.write('<!DOCTYPE html>'+
 						'<html>'+
 						'    <head>'+
@@ -45,6 +47,33 @@ var server = http.createServer(function(req, res) {
 						'     	<a href="/">Retour</a>'+
 						'    </body>'+
 						'</html>');
+        	break;
+        case '/login.html' :
+        	res.write('<!DOCTYPE html>'+
+						'<html>'+
+						'    <head>'+
+						'        <meta charset="utf-8" />'+
+						'        <title>Bienvenue sur la page de Contact</title>'+
+						'    </head>'+ 
+						'    <body>'+
+						'     	<p> Bienvenue sur la page de login </p>'+
+						'     	<a href="/">Retour</a>'+
+						'    </body>'+
+						'</html>');
+        	break;
+        case '/register.html' :
+        	res.write('<!DOCTYPE html>'+
+						'<html>'+
+						'    <head>'+
+						'        <meta charset="utf-8" />'+
+						'        <title>Bienvenue sur la page de Contact</title>'+
+						'    </head>'+ 
+						'    <body>'+
+						'     	<p> Bienvenue sur la page denregistrement </p>'+
+						'     	<a href="/">Retour</a>'+
+						'    </body>'+
+						'</html>');
+        	break;        	
         default :
         	res.writeHead(404, 'Erreur 404');
         }
